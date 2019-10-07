@@ -1,0 +1,12 @@
+Create a txt file on your desktop.
+Copy and paste this
+*Copy after this line*
+cd *You need to enter the path to the java files here. They need to be in the same folder.*
+javac Memory.java
+javac CPU.java
+java CPU sample1.txt 15
+PAUSE
+*Don't copy this line or any lines after it.*
+Save the txt file. 
+Rename the text file to *anything here*.bat
+Double click on file to auto compile and run the program. 
