@@ -1,8 +1,6 @@
 import java.io.*;
 import java.util.Random;
 
-import static jdk.nashorn.internal.runtime.ScriptingFunctions.exec;
-
 public class CPU
 {
     static BufferedReader buffRead = null;
@@ -58,7 +56,6 @@ public class CPU
                     switch(Integer.parseInt(IR))
                     {
                         case 1:
-                            System.out.println("1");
                             PC++;
                             printer.println(PC);
                             printer.flush();
@@ -73,7 +70,6 @@ public class CPU
                             PC++;
                             break;
                         case 2:
-                            System.out.println("2");
                             PC++;
                             printer.println(PC);
                             printer.flush();
@@ -91,7 +87,6 @@ public class CPU
                             PC++;
                             break;
                         case 3:
-                            System.out.println("3");
                             PC++;
                             printer.println(PC);
                             printer.flush();
@@ -107,7 +102,6 @@ public class CPU
                             }
                             break;
                         case 4:
-                            System.out.println("4");
                             PC++;
                             printer.println(PC);
                             printer.flush();
@@ -121,7 +115,6 @@ public class CPU
                             }
                             break;
                         case 5:
-                            System.out.println("5");
                             PC++;
                             printer.println(PC);
                             printer.flush();
@@ -135,7 +128,6 @@ public class CPU
                             }
                             break;
                         case 6:
-                            System.out.println("6");
                             printer.println(SP + X);
                             printer.flush();
                             try {
@@ -146,7 +138,6 @@ public class CPU
                             }
                             break;
                         case 7:
-                            System.out.println("7");
                             try
                             {
                                 PC++;
@@ -160,7 +151,6 @@ public class CPU
                             }
                             break;
                         case 8:
-                            System.out.println("8");
                             Random rand = new Random();
                             try {
                                 AC = rand.nextInt(99) + 1;
@@ -170,7 +160,6 @@ public class CPU
                             }
                             break;
                         case 9:
-                            System.out.println("9");
                             try {
                                 PC++;
                                 printer.println(PC);
@@ -186,7 +175,6 @@ public class CPU
                             }
                             break;
                         case 10:
-                            System.out.println("10");
                             try {
                                 AC = AC + X;
                                 PC++;
@@ -195,7 +183,6 @@ public class CPU
                             }
                             break;
                         case 11:
-                            System.out.println("11");
                             try {
                                 AC = AC + Y;
                                 PC++;
@@ -204,7 +191,6 @@ public class CPU
                             }
                             break;
                         case 12:
-                            System.out.println("12");
                             try {
                                 AC = AC - X;
                                 PC++;
@@ -213,7 +199,6 @@ public class CPU
                             }
                             break;
                         case 13:
-                            System.out.println("13");
                             try {
                                 AC = AC - Y;
                                 PC++;
@@ -222,7 +207,6 @@ public class CPU
                             }
                             break;
                         case 14:
-                            System.out.println("14");
                             try {
                                 X = AC;
                                 PC++;
@@ -231,7 +215,6 @@ public class CPU
                             }
                             break;
                         case 15:
-                            System.out.println("15");
                             try {
                                 AC = X;
                                 PC++;
@@ -240,7 +223,6 @@ public class CPU
                             }
                             break;
                         case 16:
-                            System.out.println("16");
                             try {
                                 Y = AC;
                                 PC++;
@@ -249,7 +231,6 @@ public class CPU
                             }
                             break;
                         case 17:
-                            System.out.println("17");
                             try {
                                 AC = Y;
                                 PC++;
@@ -258,7 +239,6 @@ public class CPU
                             }
                             break;
                         case 18:
-                            System.out.println("18");
                             try {
                                 SP = AC;
                                 PC++;
@@ -267,7 +247,6 @@ public class CPU
                             }
                             break;
                         case 19:
-                            System.out.println("19");
                             try {
                                 AC = SP;
                                 PC++;
@@ -276,7 +255,6 @@ public class CPU
                             }
                             break;
                         case 20:
-                            System.out.println("20");
                             try {
                                 PC++;
                                 printer.println(PC);
@@ -287,7 +265,6 @@ public class CPU
                             }
                             break;
                         case 21:
-                            System.out.println("21");
                             try {
                                 PC++;
                                 if (AC == 0) {
@@ -302,7 +279,6 @@ public class CPU
                             }
                             break;
                         case 22:
-                            System.out.println("22");
                             try {
                                 PC++;
                                 if (AC != 0) {
@@ -317,7 +293,6 @@ public class CPU
                             }
                             break;
                         case 23:
-                            System.out.println("23");
                             try {
                                 PC++;
                                 if (SP > 500) {
@@ -337,7 +312,6 @@ public class CPU
                             }
                             break;
                         case 24:
-                            System.out.println("24");
                             try {
                                 printer.println(SP);
                                 printer.flush();
@@ -348,7 +322,6 @@ public class CPU
                             }
                             break;
                         case 25:
-                            System.out.println("25");
                             try {
                                 X++;
                                 PC++;
@@ -357,7 +330,6 @@ public class CPU
                             }
                             break;
                         case 26:
-                            System.out.println("26");
                             try {
                                 X--;
                                 PC++;
@@ -366,7 +338,6 @@ public class CPU
                             }
                             break;
                         case 27:
-                            System.out.println("27");
                             try {
                                 if (SP > 500) {
                                     SP--;
@@ -383,7 +354,6 @@ public class CPU
                             }
                             break;
                         case 28:
-                            System.out.println("28");
                             try {
                                 printer.println(SP);
                                 printer.flush();
@@ -395,7 +365,6 @@ public class CPU
                             }
                             break;
                         case 29:
-                            System.out.println("29");
                             try {
                                 if (interupt == true) {
                                     printer.println("1999 " + SP);
@@ -414,7 +383,6 @@ public class CPU
                             }
                             break;
                         case 30:
-                            System.out.println("30");
                             try {
                                 interupt = true;
                                 if (SP < 2000) {
@@ -447,7 +415,6 @@ public class CPU
                             }
                             break;
                         case 31:
-                            System.out.println("31");
                             try
                             {
                                 AC = AC % Integer.parseInt(buffRead.readLine());
@@ -459,7 +426,6 @@ public class CPU
                             }
                             break;
                         case 32:
-                            System.out.println("32");
                             try
                             {
 
